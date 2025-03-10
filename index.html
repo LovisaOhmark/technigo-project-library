@@ -1,13 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Don't forget to connect the CSS file -->
-  <title>Library</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <title>Recipes</title>
 </head>
+
 <body>
-  <h1>Library</h1>
-  <!-- Don't forget to connect the JavaScript file -->
+  <h1>Breakfast inspiration</h1>
+
+  <span class="filterfield">
+
+    <!-- Filter buttons -->
+    <div class="filter">
+      <h3>Filter by type of breakfast</h3>
+      <button id="filter-all">All</button>
+      <button id="filter-pancake">Pancake</button>
+      <button id="filter-porridge">Porridge</button>
+      <button id="filter-smoothie">Smoothie</button>
+      <button id="filter-overnight-oats">Overnight oats</button>
+    </div>
+
+    <!-- Sort buttons -->
+    <div class="timesort">
+      <h3>Sort on Time</h3>
+      <button id="shortest-time">Shortest</button>
+      <button id="longest-time">Longest</button>
+    </div>
+
+    <!-- Random button -->
+    <div class="random">
+      <h3>Randomize</h3>
+      <button id="randomRecipe">Inspire me!</button>
+    </div>
+
+    <!-- Search field recipes -->
+    <div class="searchField">
+      <h3>Search</h3>
+      <input type="search" id="search-field" placeholder="Search recipes or ingredients">
+    </div>
+  </span>
+
+  <!-- div for recipes in javascript   -->
+  <div class="recipeList" id="recipe-list"></div>
+  <script src="script.js"></script>
+
+  <!-- footer   -->
+  </section>
+  <footer class="footer">
+    <p> Created by Lovisa Öhmark web dev bootcamp Technigo 2025 </p>
+  </footer>
+
 </body>
+
 </html>

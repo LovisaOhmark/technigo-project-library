@@ -1,409 +1,318 @@
-/*Here we have created two different arrays that you can work with if you want.
-If you choose to create your own arrays with elements, just make sure to create
-some properties that is possible to filter and sort.
+/*Array with breakfast recipes*/
+const recipe = [
 
-Remember to remove code you don't need.
-*/
-
-const books = [
   {
-    title: 'The Great Gatsby',
-    author: 'F. Scott Fitzgerald',
-    year: 1925,
-    genre: 'Fiction',
-    rating: 4.2,
-    description:
-      'A classic novel set in the Roaring Twenties, it explores themes of wealth, love, and the American Dream through the enigmatic Jay Gatsby.',
-    image: './books-images/the-great-gatsby.jpg'
-  },
-  {
-    title: 'To Kill a Mockingbird',
-    author: 'Harper Lee',
-    year: 1960,
-    genre: 'Fiction',
-    rating: 4.5,
-    description:
-      'Set in the American South, this novel tackles issues of racism and injustice through the eyes of young Scout Finch.',
-    image: './books-images/to-kill-a-mockingbird.jpg'
-  },
-  {
-    title: '1984',
-    author: 'George Orwell',
-    year: 1949,
-    genre: 'Science Fiction',
-    rating: 4.4,
-    description:
-      'A dystopian classic that explores totalitarianism and the consequences of a surveillance state in a bleak future.',
-    image: './books-images/1984.jpg'
-  },
-  {
-    title: 'Pride and Prejudice',
-    author: 'Jane Austen',
-    year: 1813,
-    genre: 'Fiction',
-    rating: 4.25,
-    description:
-      'A timeless romance novel that examines societal expectations and the misunderstandings that can arise from pride and prejudice.',
-    image: './books-images/pride-and-prejudice.jpg'
-  },
-  {
-    title: 'The Catcher in the Rye',
-    author: 'J.D. Salinger',
-    year: 1951,
-    genre: 'Fiction',
-    rating: 4,
-    description:
-      'Narrated by the teenage Holden Caulfield, the novel explores themes of alienation and the search for authenticity.',
-    image: './books-images/unknown.jpg'
-  },
-  {
-    title: 'The Hobbit',
-    author: 'J.R.R. Tolkien',
-    year: 1937,
-    genre: 'Fantasy',
-    rating: 4.6,
-    description:
-      'A fantasy adventure novel that follows Bilbo Baggins on a quest to help a group of dwarves reclaim their homeland from a dragon.',
-    image: './books-images/the-hobbit.jpg'
-  },
-  {
-    title: "Harry Potter and the Sorcerer's Stone",
-    author: 'J.K. Rowling',
-    year: 1997,
-    genre: 'Fantasy',
-    rating: 4.7,
-    description:
-      'The first book in the beloved Harry Potter series, it introduces readers to the magical world of Hogwarts and the young wizard Harry Potter.',
-    image: "./books-images/harry-potter-and-the-sorcerer'.jpg"
-  },
-  {
-    title: 'Moby-Dick',
-    author: 'Herman Melville',
-    year: 1851,
-    genre: 'Adventure',
-    rating: 4.1,
-    description:
-      'An epic tale of obsession, revenge, and the relentless pursuit of the great white whale, Moby Dick.',
-    image: './books-images/moby-dick.jpg'
-  },
-  {
-    title: 'The Lord of the Rings: The Fellowship of the Ring',
-    author: 'J.R.R. Tolkien',
-    year: 1954,
-    genre: 'Fantasy',
-    rating: 4.55,
-    description:
-      'The first volume of the epic fantasy trilogy follows Frodo Baggins and the Fellowship on their quest to destroy the One Ring.',
-    image: './books-images/the-lord-of-the-rings.jpg'
-  },
-  {
-    title: 'The Shining',
-    author: 'Stephen King',
-    year: 1977,
-    genre: 'Horror',
-    rating: 4.3,
-    description:
-      "A psychological horror novel that tells the story of the Torrance family's terrifying experiences at the haunted Overlook Hotel.",
-    image: './books-images/unknown.jpg'
-  },
-  {
-    title: 'The Chronicles of Narnia: The Lion, the Witch and the Wardrobe',
-    author: 'C.S. Lewis',
-    year: 1950,
-    genre: 'Fantasy',
-    rating: 4.15,
-    description:
-      'The first book in the Chronicles of Narnia series, it follows the adventures of children who discover the magical land of Narnia.',
-    image: './books-images/the-chronicles-of-narnia.jpg'
-  },
-  {
-    title: 'The Da Vinci Code',
-    author: 'Dan Brown',
-    year: 2003,
-    genre: 'Mystery',
-    rating: 3.8,
-    description:
-      'A gripping mystery thriller that follows Harvard symbologist Robert Langdon as he unravels the secrets of the Da Vinci Code.',
-    image: './books-images/unknown.jpg'
-  },
-  {
-    title: 'The Alchemist',
-    author: 'Paulo Coelho',
-    year: 1988,
-    genre: 'Fiction',
-    rating: 4.25,
-    description:
-      'A philosophical novel that tells the story of Santiago, a shepherd boy, on his quest to discover his personal legend.',
-    image: './books-images/unknown.jpg'
-  },
-  {
-    title: 'The Hunger Games',
-    author: 'Suzanne Collins',
-    year: 2008,
-    genre: 'Science Fiction',
-    rating: 4.3,
-    description:
-      "In a dystopian future, Katniss Everdeen becomes a symbol of rebellion when she volunteers to take her sister's place in the brutal Hunger Games.",
-    image: './books-images/unknown.jpg'
-  },
-  {
-    title: 'The Girl with the Dragon Tattoo',
-    author: 'Stieg Larsson',
-    year: 2005,
-    genre: 'Mystery',
-    rating: 4.1,
-    description:
-      'A gripping mystery novel featuring investigative journalist Mikael Blomkvist and the enigmatic hacker Lisbeth Salander.',
-    image: './books-images/unknown.jpg'
-  },
-  {
-    title: 'The Road',
-    author: 'Cormac McCarthy',
-    year: 2006,
-    genre: 'Dystopian',
-    rating: 4,
-    description:
-      "Set in a post-apocalyptic world, it follows a father and son's harrowing journey to survive and find safety.",
-    image: './books-images/unknown.jpg'
-  },
-  {
-    title: "The Hitchhiker's Guide to the Galaxy",
-    author: 'Douglas Adams',
-    year: 1979,
-    genre: 'Science Fiction',
-    rating: 4.35,
-    description:
-      "A comedic science fiction series that follows the misadventures of Arthur Dent after Earth's destruction.",
-    image: './books-images/unknown.jpg'
-  },
-  {
-    title: 'The Giver',
-    author: 'Lois Lowry',
-    year: 1993,
-    genre: 'Dystopian',
-    rating: 4.12,
-    description:
-      'A dystopian novel set in a seemingly perfect society where young Jonas discovers the dark truth beneath the surface.',
-    image: './books-images/unknown.jpg'
-  }
-]
-
-const recipes = [
-  {
-    name: 'Individual vegetarian lasagnes',
-    cuisineType: ['italian'],
+    name: 'Amerikanska bananpannkakor med blåbär',
+    cuisineType: ['Pancake'],
     ingredients: [
-      '1.2 kg cherry tomatoes',
-      '5 sprigs of fresh thyme',
-      'extra virgin olive oil',
-      '2 shallots',
-      '2 cloves of garlic',
-      '500 g baby spinach',
-      '8-12 fresh or dried lasagne sheets',
-      '350 g ricotta cheese',
-      'WHITE SAUCE',
+      '2 eggs',
+      '1 ripe banana',
+      '1 dl oats',
+      '2 msk peanut butter',
+      '1 tsk vanilla sugar',
+      '1 tsk baking powder',
+      '1 msk butter',
+      '250 g blueberries',
+      '2 msk maple syrup',
       '600 ml milk',
-      '25 g unsalted butter',
-      '2 heaped tablespoons flour',
-      '150 g vegetarian sharp, mature cheese',
-      '100 g mozzarella'
     ],
-    source: 'Jamie Oliver',
-    totalTime: 130,
-    url: 'http://www.jamieoliver.com/recipes/vegetables-recipes/individual-vegetarian-lasagnes/',
-    image: './recipe-images/individual-vegetarian-lasagnes.jpg'
+    source: 'ICA',
+    totalTime: 30,
+    url: 'https://www.ica.se/recept/amerikanska-bananpannkakor-med-blabar-729823/',
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_250745/cf_259/amerikanska_bananpannkakor_med_blabar.jpg'
   },
   {
-    name: 'Vegetarian Stir-Fried Garlic Scape',
-    cuisineType: ['Balanced'],
+    name: 'Kokos- och mannagrynsgröt med stekt banan',
+    cuisineType: ['Porridge'],
     ingredients: [
-      '8 oz. garlic scapes',
-      '3 oz. baby corn',
-      '3 oz. carrots',
-      '1 oz. dried shiitake mushrooms',
-      '1 clove of garlic sliced thinly',
-      '3 slices of fresh ginger root',
-      '2 tablespoons vegetable oil',
-      '1/4 cup shaoxing cooking wine',
-      '1/4 vegetarian stock or water',
-      '1 tablespoon light soy sauce',
-      '1 teaspoon sugar',
-      '1 teaspoon cornstarch',
-      '1/4 teaspoon ground white pepper'
+      '2 dl coconut milk',
+      '2 dl milk, your choice',
+      '4 msk semolina',
+      '2 krm vanilla powder',
+      '1 krm salt',
+      '2 small bananas',
+      '1 tsk coconut oil',
+      '1 msk honey',
+      '2 passion fruits',
+      'raosted coconut chips',
     ],
-    source: 'Red Cook',
-    totalTime: null,
-    url: 'http://redcook.net/2010/06/16/garlic-scape-an-off-menu-treat/',
-    image: './recipe-images/vegetarian-stir-fried-garlic-s.jpg'
+    source: 'ICA',
+    totalTime: 30,
+    url: 'https://www.ica.se/recept/kokos-och-mannagrynsgrot-med-stekt-banan-728831/',
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_235491/cf_259/kokos-_och_mannagrynsgrot_med_stekt_banan.jpg'
   },
   {
-    name: 'Cheat’s cheesy focaccia',
-    cuisineType: ['Italian'],
+    name: 'Supersmoothie med spenat och ingefära',
+    cuisineType: ['Smoothie'],
     ingredients: [
-      '500g pack bread mix',
-      '2 tbsp olive oil , plus a little extra for drizzling',
-      '25g parmesan (or vegetarian alternative), grated',
-      '75g dolcelatte cheese (or vegetarian alternative)'
+      '1 ripe avocado',
+      '1 green apple',
+      '1 msk grated ginger',
+      '3 dl spinach',
+      '1 1/2 dl froozen green peas',
+      '125 g mango',
+      '2 msk fresh lime juice',
+      '3 dl cold water',
     ],
-    source: 'BBC Good Food',
-    totalTime: 40,
-    url: 'https://www.bbcgoodfood.com/recipes/cheats-cheesy-focaccia',
-    image: './recipe-images/cheat’s-cheesy-focaccia.jpg'
+    source: 'ICA',
+    totalTime: 15,
+    url: 'https://www.ica.se/recept/supersmoothie-med-spenat-och-ingefara-726428/',
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_210973/cf_259/supersmoothie_med_spenat_och_ingefara.jpg'
   },
   {
-    name: "Vegetarian Shepherd's Pie",
-    cuisineType: ['Balanced', 'High-Fiber'],
+    name: 'Havrepannkakor',
+    cuisineType: ['Pancake'],
     ingredients: [
-      '2 tablespoons extra-virgin olive oil',
-      '1 large onion, finely diced',
-      '2 carrots, peeled and thinly sliced',
-      '2 celery stalks, thinly sliced',
-      '10 ounces cremini mushrooms, trimmed and sliced',
-      '1 tablespoon tomato paste',
-      "1 tablespoon vegetarian Worcestershire sauce, such as Annie's Naturals",
-      '1 dried bay leaf',
-      '1 cup French green lentils, picked over',
-      'Kosher salt and freshly ground pepper',
-      '1 cup frozen peas',
-      '2 pounds Yukon Gold potatoes, scrubbed and cut into 1 1/2-inch pieces',
-      '4 cloves garlic',
-      '4 tablespoons unsalted butter',
-      '1/2 cup whole milk, warmed'
+      '3 eggs',
+      '2 dl oat flour',
+      '1/2 tsk salt',
+      '3 dl milk',
+      '40 g butter',
+      'Your choice of topping',
+
     ],
-    source: 'Martha Stewart',
-    totalTime: 120,
-    url: 'https://www.marthastewart.com/1535235/vegetarian-shepherds-pie',
-    image: "./recipe-images/vegetarian-shepherd's-pie.jpg"
+    source: 'Arla',
+    totalTime: 20,
+    url: 'https://www.arla.se/recept/havrepannkakor/',
+    image: 'https://images.arla.com/recordid/47254108-98DE-4E61-926A8FB6E01A076D/havrepannkakor.jpg?width=1269&height=715&mode=crop&crop=(0,89,0,-59)&format=jpg'
   },
   {
-    name: 'Chicken Paprikash',
-    cuisineType: ['Low-Carb'],
+    name: 'Bovetegröt med sesamfrön, kanel och russin',
+    cuisineType: ['Porridge'],
     ingredients: [
-      '640 grams chicken - drumsticks and thighs ( 3 whole chicken legs cut apart)',
-      '1/2 teaspoon salt',
-      '1/4 teaspoon black pepper',
-      '1 tablespoon butter – cultured unsalted (or olive oil)',
-      '240 grams onion sliced thin (1 large onion)',
-      '70 grams Anaheim pepper chopped (1 large pepper)',
-      '25 grams paprika (about 1/4 cup)',
-      '1 cup chicken stock',
-      '1/2 teaspoon salt',
-      '1/2 cup sour cream',
-      '1 tablespoon flour – all-purpose'
+      '1 dl buckwheat',
+      '1 dl peeled sesame seeds',
+      '1/2 dl raisin',
+      '1 tsk ground cinnamon',
+      '2 apples',
+      'ground cinnamon',
+      'honey',
     ],
-    source: 'No Recipes',
-    totalTime: 80,
-    url: 'http://norecipes.com/recipe/chicken-paprikash/',
-    image: './recipe-images/chicken-paprikash.jpg'
+    source: 'Coop',
+    totalTime: 25,
+    url: 'https://www.coop.se/recept/bovetegrot-med-sesamfron-kanel-och-russin/',
+    image: 'https://res.cloudinary.com/coopsverige/image/upload/f_auto,fl_progressive,q_90,g_center,h_800,w_800/v1535547500/347870.jpg'
   },
   {
-    name: 'Baked Chicken',
-    cuisineType: ['american'],
+    name: 'Overnight oats med chokladsmak',
+    cuisineType: ['Overnight oats'],
     ingredients: [
-      '6 bone-in chicken breast halves, or 6 chicken thighs and wings, skin-on',
-      '1/2 teaspoon coarse salt',
-      '1/2 teaspoon Mrs. Dash seasoning',
-      '1/4 teaspoon freshly ground black pepper'
+      '4 dl oats',
+      '1/2 dl coconut flakes',
+      '1 msk chia seeds',
+      '1 krm salt',
+      '6 dl oat drink, chocolate flavour',
+      'Roasted coconut flakes',
+      'Banana',
+      'Blueberry',
     ],
-    source: 'Martha Stewart',
-    totalTime: 90,
-    url: 'http://www.marthastewart.com/318981/baked-chicken',
-    image: './recipe-images/baked-chicken.jpg'
+    source: 'Coop',
+    totalTime: 140,
+    url: 'https://www.coop.se/recept/overnight-oats-med-chokladsmak/',
+    image: 'https://res.cloudinary.com/coopsverige/image/upload/f_auto,fl_progressive,q_90,g_center,h_800,w_800/v1669897056/cloud/268108.jpg'
   },
   {
-    name: 'Deep Fried Fish Bones',
-    cuisineType: ['south east asian'],
-    ingredients: ['8 small whiting fish or smelt', '4 cups vegetable oil'],
-    source: 'Serious Eats',
-    totalTime: 31,
-    url: 'http://www.seriouseats.com/recipes/2011/03/deep-fried-fish-bones-recipe.html',
-    image: './recipe-images/deep-fried-fish-bones.jpg'
-  },
-  {
-    name: 'Burnt-Scallion Fish',
-    cuisineType: ['chinese'],
+    name: 'Overnight oats med blåbär',
+    cuisineType: ['Overnight oats'],
     ingredients: [
-      '2 bunches scallions',
-      '8 tbsp. butter',
-      '2 8-oz. fish filets'
+      '2 dl oats',
+      '2 dl coconut drink',
+      '3 tsk chia seeds',
+      '1 dl quark',
+      '1 dl froozen berries',
+      '1 dl granola',
+      '2 msk dried blueberries',
     ],
-    source: 'Saveur',
-    totalTime: 70,
-    url: 'http://www.saveur.com/article/Recipes/Burnt-Scallion-Fish',
-    image: './recipe-images/fish-dish.jpg'
+    source: 'ICA',
+    totalTime: 140,
+    url: 'https://www.ica.se/recept/overnight-oats-med-blabar-728839/',
+    image: 'https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_237454/cf_259/overnight_oats_med_blabar.jpg'
   },
   {
-    name: 'Curry-Crusted Fish',
-    cuisineType: ['south east asian'],
+    name: 'Smoothie hallon',
+    cuisineType: ['Smoothie'],
     ingredients: [
-      '3 slices bread , about 85g/3oz in total',
-      '1 lime',
-      '1.0 tbsp Korma curry paste',
-      '4 thick white fish fillets'
+      '1 dl Frozen raspberries',
+      '1/2 msk honey',
+      '1 dl milk',
+      '1 dl vanilla yoghurt',
     ],
-    source: 'BBC Good Food',
-    totalTime: 80,
-    url: 'http://www.bbcgoodfood.com/recipes/4717/',
-    image: './recipe-images/fish-dish.jpg'
+    source: 'Arla',
+    totalTime: 10,
+    url: 'https://www.arla.se/recept/smoothie-hallon/',
+    image: 'https://images.arla.com/recordid/974A7347-8772-46D0-868D1392E75DBEB4/smoothie-hallon.jpg?width=1269&height=715&mode=crop&format=jpg'
   },
-  {
-    name: 'Meat Stock',
-    cuisineType: 'american',
-    ingredients: [
-      '2.5 pounds beef marrow bones',
-      '1 large onion, quartered',
-      '2 carrots, sliced',
-      '1 leek, cleaned and sliced',
-      '2 celery stalks, sliced',
-      '2.5 pounds organic beef stew meat, cubed',
-      '2 tablespoons tomato paste',
-      '5 cloves garlic',
-      '2 bay leaves',
-      '3 sprigs thyme',
-      '3 sprigs Italian parsley',
-      '1/2 teaspoon black peppercorns'
-    ],
-    source: 'Food52',
-    totalTime: 60,
-    url: 'https://food52.com/recipes/3712-meat-stock',
-    image: './recipe-images/meat.jpg'
-  },
-  {
-    name: 'Homemade Meat Broth',
-    cuisineType: 'american',
-    ingredients: [
-      '1 teaspoon salt',
-      '1 carrot, peeled',
-      '1 medium onion, peeled',
-      '2 or 3 celery stalks',
-      '¼ red or yellow bell pepper, stripped of all its seeds',
-      '1 small boiling potato, peeled',
-      '1 ripe, fresh tomato, or 1 canned Italian plum tomato, drained of juice',
-      '5 pounds assorted pieces of meat and bones (see meat suggestions above), of which no less than 1½ pounds is all meat'
-    ],
-    source: 'Cookstr',
-    totalTime: 60,
-    url: 'http://www.cookstr.com/recipes/il-brodo-homemade-meat-broth',
-    image: './recipe-images/meat.jpg'
-  },
-  {
-    name: 'Spice-Rubbed Grilled Flap Meat (Sirloin Tip) Recipe',
-    cuisineType: 'south-american',
-    ingredients: [
-      '1 tablespoon whole black peppercorns, toasted',
-      '1 teaspoon coriander seed, toasted',
-      '1 teaspoon fennel seed, toasted',
-      '1 teaspoon cumin pods, toasted',
-      '1 teaspoon red pepper flakes',
-      '1/2 teaspoon dried oregano',
-      '2 medium cloves garlic, minced (about 2 teaspoons)',
-      '2 tablespoons vegetable or canola oil',
-      '1 whole flap meat steak, 2 to 2 1/2 pounds',
-      'Kosher salt'
-    ],
-    source: 'Serious Eats',
-    totalTime: 240,
-    url: 'http://www.seriouseats.com/recipes/2012/05/spice-rubbed-grilled-flap-meat-sirloin-tip-recipe.html',
-    image: './recipe-images/grilled.jpg'
-  }
 ]
+
+function displayRecipes(recipes) {
+  //look after the HTML-element where we want to put our arrays at 
+  const recipeList = document.getElementById("recipe-list");
+
+  //create a empty string where the content will locate
+  let html = '';
+
+  //go through all the recipes with an forEach loop
+  recipes.forEach((recipe) => {
+    html += `
+      <a href="${recipe.url}" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="recipe">
+          <img src="${recipe.image}" alt="${recipe.name}" width="100%">
+          <h2>${recipe.name}</h2>
+          <hr class="separator">
+          <p><strong>Cuisine Type: </strong>${recipe.cuisineType}</p>
+          <p><strong>Source: </strong>${recipe.source}</p>
+          <p><strong>Total Time: </strong>${recipe.totalTime ? recipe.totalTime + ' minutes' : 'Unknown'}</p>
+          <hr class="separator">
+          <p><strong>Ingredients: </strong></p>
+          <ul>
+            ${recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+          </ul>
+        </div>
+      </a>
+    `
+  });
+
+  recipeList.innerHTML = html;
+
+};
+
+displayRecipes(recipe)
+
+//function for sort button shortest-longest cooking time
+function sortOnShortest(recipesTime) {
+  recipesTime.sort((a, b) => a.totalTime - b.totalTime);
+
+  displayRecipes(recipesTime);
+};
+
+//function for sort button longest-shortest cooking time
+function sortOnLongest(recipesTime) {
+  recipesTime.sort((a, b) => b.totalTime - a.totalTime);
+
+  displayRecipes(recipesTime);
+};
+
+//Event listener for make it possible to add a filters at the same time
+document.getElementById("shortest-time").addEventListener("click", () => {
+  sortOnShortest(recipe);  // Sort recpies when button activated 
+});
+
+document.getElementById("longest-time").addEventListener("click", () => {
+  sortOnLongest(recipe);  // Sort recpies when button activated 
+});
+
+//show all recipes 
+document.getElementById("filter-all").addEventListener("click", () => {
+  displayRecipes(recipe);
+});
+
+//filter only pancake recipes 
+function filterPancake(recipes) {
+  return recipes.filter(recipe => recipe.cuisineType.includes('Pancake'));
+};
+
+document.getElementById("filter-pancake").addEventListener("click", () => {
+  const filteredPancakeRecipes = filterPancake(recipe);
+  displayRecipes(filteredPancakeRecipes)
+});
+
+//filter only porridge recipes
+function filterPorridge(recipes) {
+  return recipes.filter(recipe =>
+    recipe.cuisineType.includes('Porridge')
+  );
+};
+
+document.getElementById("filter-porridge").addEventListener("click", () => {
+  const filteredPorridgeRecipes = filterPorridge(recipe);
+  displayRecipes(filteredPorridgeRecipes)
+});
+
+//filter only smoothie recipes
+function filterSmoothie(recipes) {
+  return recipes.filter(recipe =>
+    recipe.cuisineType.includes('Smoothie')
+  );
+};
+
+document.getElementById("filter-smoothie").addEventListener("click", () => {
+  const filteredSmoothieRecipes = filterSmoothie(recipe);
+  displayRecipes(filteredSmoothieRecipes)
+});
+
+//filter only Overnight oats
+function filterOvernightOats(recipes) {
+  return recipes.filter(recipe =>
+    recipe.cuisineType.includes('Overnight oats')
+  );
+};
+
+document.getElementById("filter-overnight-oats").addEventListener("click", () => {
+  const filteredOvernightOatsRecipes = filterOvernightOats(recipe);
+  displayRecipes(filteredOvernightOatsRecipes)
+});
+
+//two variables that collect all the buttons in a container within class
+const activeFilterButtons = document.querySelectorAll(".filter button");
+const activeSortButtons = document.querySelectorAll(".timesort button");
+
+//add eventlistener for each button
+activeFilterButtons.forEach(button => {
+  button.addEventListener('click', function () {
+    activeFilterButtons.forEach(btn => btn.classList.remove('active'));
+    //loop that goes through every button and makes sure that only one is active at a time
+
+    this.classList.add('active');
+    //adds the active class to the button that was just clicked
+  });
+});
+
+//add eventlistener for each button
+activeSortButtons.forEach(button => {
+  button.addEventListener('click', function () {
+    activeSortButtons.forEach(btn => btn.classList.remove('active'));
+    //loop through every button and makes sure only one is active at the same time
+
+    this.classList.add('active');
+    //add active class to the button that was clicked
+  });
+});
+
+//function that filter recipes name, breakfast type and ingridients 
+function searchRecipes(keyword, recipes) {
+  return recipes.filter(recipe => {
+    return (
+      recipe.name.toLowerCase().includes(keyword.toLowerCase()) ||
+      recipe.cuisineType.some(cuisine => cuisine.trim().toLowerCase().includes(keyword.toLowerCase())) ||
+      recipe.ingredients.some(ingredient => ingredient.toLowerCase().includes(keyword.toLowerCase()))
+    );
+  });
+}
+
+document.getElementById('search-field').addEventListener("input", function () {
+  const searchTerm = this.value;
+  //gets the value from input field
+  const filteredRecipes = searchRecipes(searchTerm, recipe);
+  //filter the recipes
+  displayRecipes(filteredRecipes);
+  //show the filtered recipes
+});
+
+//function for randomize a recipe
+function getRandomRecipe(recipes) {
+  const randomIndex = Math.floor(Math.random() * recipes.length);
+  return recipes[randomIndex];
+  //return the random selected recipe
+}
+
+//eventlistener for random button
+document.getElementById('randomRecipe').addEventListener("click", function () {
+
+  activeFilterButtons.forEach(btn => btn.classList.remove('active'));
+  activeSortButtons.forEach(btn => btn.classList.remove('active'));
+  //removes the other filter and sort buttons when random is clicked
+
+  const randomRecipe = getRandomRecipe(recipe);
+  displayRecipes([randomRecipe]);
+  //show the selected recipe
+});

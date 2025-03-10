@@ -1,3 +1,168 @@
 body {
-  background: blue;
+  background: rgb(240, 243, 244)
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1 {
+  color: rgb(222, 49, 99);
+  font-size: 48px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  padding: 40px 50px;
+}
+
+h2,
+h3 {
+  color: black;
+  font-family: Helvetica, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.filter,
+.timesort,
+.random {
+  display: inline-block;
+  padding-left: 50px;
+}
+
+p,
+li,
+button {
+  font-family: Helvetica, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+}
+
+button {
+  border: 2px solid transparent;
+  border-radius: 50px;
+  padding: 8px 16px;
+  margin-right: 10px;
+}
+
+.filter button {
+  background-color: rgb(204, 204, 255);
+  color: rgb(84, 41, 102);
+}
+
+.timesort button {
+  background-color: rgb(240, 128, 128);
+  color: white;
+}
+
+.random button {
+  background-color: rgb(125, 60, 152);
+  color: white;
+}
+
+.filter button:hover,
+.random button:hover {
+  border-color: rgb(222, 49, 99);
+}
+
+.filter button.active,
+.random button.active {
+  background-color: rgb(84, 41, 102);
+  color: white;
+}
+
+.timesort button:hover {
+  border-color: rgb(222, 49, 99);
+  background-color: rgb(237, 95, 117);
+  color: white;
+}
+
+.timesort button.active {
+  background-color: rgb(237, 95, 117);
+  color: white;
+}
+
+.searchField {
+  padding: 50px;
+}
+
+.searchField input {
+  padding: 10px;
+  display: inline-flex;
+  width: 30%;
+}
+
+::-webkit-input-placeholder {
+  color: rgb(174, 174, 174);
+}
+
+:-moz-placeholder {
+  color: rgb(174, 174, 174);
+}
+
+::-moz-placeholder {
+  color: rgb(174, 174, 174);
+}
+
+:-ms-input-placeholder {
+  color: rgb(174, 174, 174);
+}
+
+.recipeList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 50px;
+  padding-top: 20px;
+  column-gap: 40px;
+  row-gap: 20px;
+}
+
+.recipe {
+  width: 100%;
+  border: 2px solid lightgray;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe div {
+  height: auto;
+  width: auto;
+}
+
+.recipe img {
+  border-radius: 30px;
+}
+
+.recipe ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+div .recipe:hover {
+  border: 2px solid rgb(222, 49, 99);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+}
+
+.separator {
+  border: none;
+  border-top: 1px solid rgb(240, 243, 244);
+  margin: 10px 0;
+  width: 100%;
+}
+
+.footer {
+  display: block;
+  color: rgb(234, 250, 241);
+  background-color: rgb(222, 49, 99);
+  font-size: 10px;
+  padding: 2px;
+  padding-left: 10px;
+  margin-top: 250px;
 }
